@@ -13,19 +13,13 @@ int main() {
 
     Text text;
 
-    text.reverseText(); //RBF
+
     text.printText();
 
     text.pushNewLetter( 'c' );
-
-    text.reverseText(); //RBF
-    text.printText(); //RBR looking good
-
-
     text.pushNewLetter( 'a' );
     text.pushNewLetter( 't' );
 
-    cout << text.count << endl; //RBF
     text.printText();  // tac
 
 

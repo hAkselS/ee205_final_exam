@@ -42,21 +42,38 @@ void Text::reverseText() {
     }
     if ( head->next == nullptr){
         cout << "one item list has been reversed!" << endl;
+        return;
     }
-
+    //this causes a seg fault
+    /*int tempCount = count;
     Letter* pLetter = head;
     Letter* pNewHead = nullptr;
     bool isListReversed = false;
-    while (!isListReversed) {
-        while (pLetter->next != nullptr) {
+    bool firstIteration = true;
+    while ( !isListReversed ) {
+        for (int i = 0; i < tempCount; i++) {
             pLetter = pLetter->next;
+
         }
-        pNewHead = pLetter;     //the placeholder head (pNewHead) now points to the last item in the list
+        if (firstIteration) {
+            pNewHead = pLetter;
+            firstIteration = false;
+        }
+        pLetter->next = pNewHead->next;
 
-        //head = pNewHead;
+        if ( tempCount == 1 ){
+            pLetter ->next = nullptr;
+        }
 
-        isListReversed = true;
+        tempCount --;
+        if (tempCount == 0 ){
+
+            isListReversed = true;
+        }
     }
+   */
+
+
 }
 
 
